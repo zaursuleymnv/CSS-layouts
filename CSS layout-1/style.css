@@ -1,0 +1,354 @@
+/* ======================================================================== */ 
+
+ /*                      NOT RELATED TO THE TTUTORIAL                        */
+
+/* ======================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+*{
+	
+	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	list-style: none;
+
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+	list-style: none;
+}
+
+:root {
+  --step--2: clamp(0.69rem, calc(0.58rem + 0.60vw), 1.00rem);
+  --step--1: clamp(0.83rem, calc(0.67rem + 0.81vw), 1.25rem);
+  --step-0: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+  --step-1: clamp(1.20rem, calc(0.91rem + 1.47vw), 1.95rem);
+  --step-2: clamp(1.44rem, calc(1.05rem + 1.95vw), 2.44rem);
+  --step-3: clamp(1.73rem, calc(1.21rem + 2.58vw), 3.05rem);
+  --step-4: clamp(2.07rem, calc(1.39rem + 3.40vw), 3.82rem);
+  --step-5: clamp(2.49rem, calc(1.60rem + 4.45vw), 4.77rem);
+	
+	/* Font style */
+	
+	--ff-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	
+	/* Color style */
+	
+	/*
+	--color-primary:#c51350;
+	--color-secondary:#ff9a3c;
+	--color-body:#333;
+	--color-bg: #006600;
+	--color-primary-dark:#007f67;
+	--color-error:#cc3333;
+	--color-success:#4bb544;
+	--color-link:#cdcdcc;
+	--color-border:darkgrey;
+	--bs:#ffa857;
+	*/
+	
+	--color-primary: #0575E6;
+	--color-secondary: #6dd5ed;
+	--color-primary-light:#8dc6ff;
+	--color-primary-dark:#021B79;
+	--color-error:#cc3333;
+	--color-success:#4bb544;
+	--color-link:#606470;
+	--color-text:#5f6769;
+	--color-header-dark:#393e46;
+	--color-background:#f5f9ee;
+	--color-border-sc:#ececec;
+	--color-border-focus:#69c2ff;
+	--color-border:#d3d6db;
+	--bs:#ffa857;
+	--color-percentage:#5f6769;
+	--color-header-light:#9ba6a5;
+	--color-border-focus:#a9d7f6;
+	--color-input-background:#f5f9ee;
+	--gradient: linear-gradient(135deg var(--color-primary), var(--color-secondary));
+	
+	
+}
+
+
+/* ======================================================================== */ 
+
+ /*                      RELATED TO THE TTUTORIAL                        */
+
+/* ======================================================================== */
+
+body {
+    height: 5000px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    color: #f9f9f9;
+    background: firebrick;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.news-list {
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 1rem;
+    margin-block: 40px;
+}
+
+.news-list .news-item {
+    width: 30%;
+}
+
+.news-list .news-item .photo-box {
+    position: relative;
+}
+
+.news-list .news-item .photo-box img {
+    max-width: 100%;
+    background: #d3d6db;
+}
+
+.news-list .news-item .photo-box img[alt="krakow"] {
+    aspect-ratio: 1/1;
+}
+
+.news-list .news-item .photo-box .datetime {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.news-list .news-item .photo-box .datetime .date {
+    color: #fff;
+    background-color: #1894A0;
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 15px;
+    opacity: .9;
+}
+
+.news-list .news-item .photo-box .datetime .date .day {
+    display: block;
+}
+
+.news-list .news-item .photo-box .datetime .hour {
+    color: #fff;
+    background-color: #334564 ;
+    font-weight: bold;
+    padding: 5px 15px 3px;
+    display: inline-block;
+    opacity: .9;
+}
+
+.news-list .news-item .photo-box .news-type {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: #fff;
+    font-size: var(--step-0);
+    padding: 6px 15px;
+
+}
+
+.news-list .news-item .content {
+    border: 1px solid #ddd;
+    border-width: 0 1px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 1rem 1.9rem 1.2rem 1.9rem;
+
+}
+
+.news-list .news-item .content h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y:auto;
+    color: #1331fF;
+    font-size: var(--step-0);
+    font-weight: 600;
+    line-height: 1.5;
+
+}
+
+.news-list .news-item .stats {
+    display: flex;
+
+}
+
+.news-list .news-item .stats button {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .7rem;
+    background-color: transparent;
+    font-size: var(--step--2);
+    font-weight: 600;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: .7rem 1.2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.news-list .news-item .stats button:hover {
+    color: #f9f9f9;
+}
+
+.news-list .news-item .stats button::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 0;
+    height: 100%;
+    transition: .3s;
+}
+
+.news-list .news-item .stats button:hover::before {
+    width: 100%;
+    color: #f9f9f9;
+    transition: .3s;
+    opacity: 1;
+    z-index: -2;
+}
+
+.news-list .news-item .stats button.like:hover::before {
+    background:rgb(15, 182, 23);
+}
+
+.news-list .news-item .stats button.dislike:hover::before {
+    background:rgb(235, 17, 17);
+}
+
+.news-list .news-item .stats button.view:hover::before {
+    background:rgb(21, 151, 226);
+}
+
+
+
+/* Our Works */
+
+
+.our-works {
+    display: flex;
+    grid-gap: 1rem;
+    margin-block: 40px 0;
+}
+
+.our-works .work {
+    width: 25%;
+}
+
+.our-works .photo-box {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.our-works .photo-box img {
+    max-width: 100%;
+
+}
+
+.our-works .photo-box .overlay-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    /* width: 97.5%;
+    height: 99.5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .6rem;
+    background-color: rgba(0, 0, 0, 49%);
+    transform: translateX(-100%);
+    transition: all .3s;
+
+}
+
+:root {
+    --height-links:60px;
+}
+
+.our-works .photo-box .overlay-icons a {
+    width: 60px;
+    height: var(--height-links);
+    display: inline-block;
+    color: #f9f9f9;
+    background-color: #cc3333;
+    font-size: var(--step-0);
+    text-align: center;
+    line-height: var(--height-links);
+
+}
+
+.our-works .content {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    font-size: var(--step--1);
+    border: 1px solid #ddd;
+    padding: 1.9rem 1.2rem;
+
+}
+
+.our-works .content a.title {
+    padding-left: 1.9rem;
+}
+
+.our-works .content a.title h3 {
+    display: inline;
+    color: #222;
+}
+
+.our-works .content a.plus {
+    width: 40px;
+    height: 40px;
+    color: #f9f9f9;
+    background-color: #cc3333;
+    text-align: center;
+    line-height: 40px;
+
+}
+
+.our-works .work:hover .photo-box .overlay-icons {
+    transform: translateX(0);
+}
+
+
+
+
+
+
